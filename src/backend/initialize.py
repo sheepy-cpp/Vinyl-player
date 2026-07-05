@@ -9,6 +9,7 @@ def check_songs():
         songs_dir.mkdir(parents=True, exist_ok=True)
 
     print("debug2")
+    
     print(songs_dir)
 
     return songs_dir
