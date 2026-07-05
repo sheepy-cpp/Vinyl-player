@@ -13,5 +13,4 @@ def check_songs():
 
     return songs_dir
 
-
 songs_path = check_songs()
