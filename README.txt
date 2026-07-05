@@ -8,6 +8,6 @@ real one and can be manipulated in the same way (spun, stopped, etc).
 originally i wanted to write this programm with a c++ backend and a python frontend- but settled on 
 python to make it simpler.
 
-updates will follow to this file ^^
+updates will follow to this file and repo ^^
 
 i started development on the 5th of july 2026!
