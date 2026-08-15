@@ -1,0 +1,7 @@
+TODO
+
+use settings.json
+    add languages
+    add a panel in the GUI
+
+add GUI
