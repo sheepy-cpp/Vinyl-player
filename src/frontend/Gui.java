@@ -1,1 +1,5 @@
-//make a gui someday
+package frontend;
+
+public class Gui {
+    //make a gui someday
+}
