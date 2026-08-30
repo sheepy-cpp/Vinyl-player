@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import lib.FindProjectRoot;
+import customlib.FindProjectRoot;
 
 public class InitSongDir {
 
