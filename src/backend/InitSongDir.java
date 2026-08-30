@@ -1,10 +1,10 @@
 package backend;
 
-import backend.lib.FindProjectRoot;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import lib.FindProjectRoot;
 
 public class InitSongDir {
 

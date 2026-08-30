@@ -1,11 +1,11 @@
 package backend;
 
-import backend.lib.FindProjectRoot;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Path;
+import lib.FindProjectRoot;
 
 public class FetchSettings {
 
