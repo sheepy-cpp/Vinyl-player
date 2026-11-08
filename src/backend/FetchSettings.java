@@ -10,7 +10,6 @@ import customlib.FindProjectRoot;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
-
 public class FetchSettings {
 
     private static final String FILE_NAME = "VinylSettings.json";
