@@ -5,9 +5,18 @@ import java.net.URISyntaxException;
 import java.nio.file.Path;
 
 public class InitBackend {
-    public static void InitB() throws IOException, URISyntaxException {
+
+    private static Path[] songFiles = new Path[0];
+
+    public static Path[] getSongFiles() {
+        return songFiles;
+    }
+
+    public static void Init() throws IOException, URISyntaxException {
         boolean exists = InitSongDir.songsFolderExists();
         Path songsPath = InitSongDir.ensureSongsFolder();
+
+        songFiles = FetchSongsInDir.fetchSongFiles();
 
         FetchSettings.checkAndCreateSettings();
         int debugMode = FetchSettings.readSettings();
@@ -20,6 +29,11 @@ public class InitBackend {
             }else{
                 System.out.println("songs directory got created at: " + songsPath);
             }
+
+            System.out.println(songFiles.length + " files found in /songs");
+            for (Path song : songFiles) {
+                System.out.println(" - " + song.getFileName());
+        }
         }
     }
 }
