@@ -3,12 +3,14 @@ package backend;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 
 public class InitBackend {
 
-    private static Path[] songFiles = new Path[0];
+    private static List<Path> songFiles = new ArrayList<>();
 
-    public static Path[] getSongFiles() {
+    public static List<Path> getSongFiles() {
         return songFiles;
     }
 
@@ -21,19 +23,19 @@ public class InitBackend {
         FetchSettings.checkAndCreateSettings();
         int debugMode = FetchSettings.readSettings();
 
-        if (debugMode == 1){
-            System.out.println("debug is on"); 
+        if (debugMode == 1) {
+            System.out.println("debug is on");
 
-            if (exists){
+            if (exists) {
                 System.out.println("songs directory is at: " + songsPath);
-            }else{
+            } else {
                 System.out.println("songs directory got created at: " + songsPath);
             }
 
-            System.out.println(songFiles.length + " files found in /songs");
+            System.out.println(songFiles.size() + " files found in /songs");
             for (Path song : songFiles) {
                 System.out.println(" - " + song.getFileName());
-        }
+            }
         }
     }
 }

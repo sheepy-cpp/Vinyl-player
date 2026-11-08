@@ -5,9 +5,10 @@ import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
+import java.util.List;
 
 public class FetchSongsInDir {
-    public static Path[] fetchSongFiles() {
+    public static List<Path> fetchSongFiles() {
         try {
             Path songsPath = InitSongDir.ensureSongsFolder();
 
@@ -15,11 +16,11 @@ public class FetchSongsInDir {
                 return stream
                     .filter(Files::isRegularFile)
                     .filter(p -> p.toString().toLowerCase().endsWith(".mp3"))
-                    .toArray(Path[]::new);
+                    .toList();
             }
         } catch (IOException | URISyntaxException e) {
             System.err.println("Error reading files: " + e.getMessage());
-            return new Path[0];
+            return List.of();
         }
     }
 }
