@@ -28,13 +28,17 @@ public class InitBackend {
 
             if (exists) {
                 System.out.println("songs directory is at: " + songsPath);
-            } else {
+            }else{
                 System.out.println("songs directory got created at: " + songsPath);
             }
-
-            System.out.println(songFiles.size() + " files found in /songs");
-            for (Path song : songFiles) {
-                System.out.println(" - " + song.getFileName());
+            
+            if (!songFiles.isEmpty()){
+                System.out.println(songFiles.size() + " files found in /songs");
+                for (Path song : songFiles) {
+                    System.out.println(" - " + song.getFileName());
+                }
+            }else{
+                System.out.println("no .mp3 files in /songs found");
             }
         }
     }
