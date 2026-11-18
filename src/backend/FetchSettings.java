@@ -30,7 +30,6 @@ public class FetchSettings {
                     String template = """
                     {
                         "debugMode": "false",
-                        "language": "eng"
                     }
                     """;
 
